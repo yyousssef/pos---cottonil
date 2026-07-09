@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f5f0;
+    direction: rtl;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 transparent;
+  }
+
+  *::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 20px;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-gray-100;
+  }
+
+  .btn-primary {
+    @apply px-4 py-2 rounded-xl text-sm font-medium text-white transition-all duration-200 hover:shadow-md active:scale-95;
+    background: #3b82f6;
+  }
+
+  .btn-success {
+    @apply px-4 py-2 rounded-xl text-sm font-medium text-white transition-all duration-200 hover:shadow-md active:scale-95;
+    background: #10b981;
+  }
+
+  .btn-warning {
+    @apply px-4 py-2 rounded-xl text-sm font-medium text-white transition-all duration-200 hover:shadow-md active:scale-95;
+    background: #f59e0b;
+  }
+
+  .btn-danger {
+    @apply px-4 py-2 rounded-xl text-sm font-medium text-white transition-all duration-200 hover:shadow-md active:scale-95;
+    background: #ef4444;
+  }
+
+  .input-field {
+    @apply px-4 py-2.5 rounded-xl text-sm border border-gray-200 outline-none transition-all duration-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-100;
+  }
+
+  .badge {
+    @apply px-2.5 py-1 rounded-full text-xs font-medium;
+  }
+
+  .badge-success {
+    @apply badge;
+    background: #d1fae5;
+    color: #065f46;
+  }
+
+  .badge-warning {
+    @apply badge;
+    background: #fef3c7;
+    color: #92400e;
+  }
+
+  .badge-danger {
+    @apply badge;
+    background: #fee2e2;
+    color: #991b1b;
+  }
+
+  .badge-info {
+    @apply badge;
+    background: #dbeafe;
+    color: #1e40af;
+  }
+}
